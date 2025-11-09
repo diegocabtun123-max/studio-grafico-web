@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Gráfico | Imprenta Profesional, Publicidad y Artículos Personalizados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconos para diseño -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #FF4E50; /* Rojo/Naranja llamativo para CTA */
+            --secondary-color: #FC913A; /* Naranja Publicitario */
+            --tertiary-color: #38A3A5; /* Turquesa/Cian para profesionalismo */
+            --dark-bg: #1A1A2E; /* Fondo Oscuro Profundo */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        .text-primary-cta { color: var(--primary-color); }
+        .bg-primary-cta { background-color: var(--primary-color); }
+        .bg-secondary { background-color: var(--secondary-color); }
+        .bg-tertiary { background-color: var(--tertiary-color); }
+        .hero-bg {
+            background-image: linear-gradient(135deg, #1A1A2E 0%, #38A3A5 100%);
+            min-height: 80vh;
+        }
+        .cta-whatsapp {
+            z-index: 1000;
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .cta-whatsapp:hover {
+            transform: scale(1.05);
+        }
+        /* Estilos para el proceso de trabajo */
+        .process-step {
+            position: relative;
+        }
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -10%; /* Ajuste para el espacio entre elementos */
+            transform: translateY(-50%);
+            width: 80%;
+            height: 2px;
+            background-color: var(--secondary-color);
+            z-index: 0;
+        }
+        .process-step:last-child::after {
+            content: none;
+        }
+
+        @media (max-width: 768px) {
+            .process-step::after {
+                content: none;
+            }
+        }
+        /* Estilo para el formulario */
+        .input-style {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+            width: 100%;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s;
+        }
+        .input-style:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 78, 80, 0.3);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/5219996708674?text=Hola%2C%20quisiera%20pedir%20una%20cotización%20para%20un%20trabajo%20de%20impresión%2Fpublicidad."
+       class="cta-whatsapp flex items-center bg-green-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-2xl mr-3"></i>
+        WhatsApp
+    </a>
+
+    <!-- HEADER/NAVBAR -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-primary-cta">Studio Gráfico</h1>
+            <nav class="hidden md:flex space-x-6 text-gray-600 font-semibold">
+                <a href="#servicios" class="hover:text-primary-cta transition duration-200">Servicios</a>
+                <a href="#beneficios" class="hover:text-primary-cta transition duration-200">Beneficios</a>
+                <a href="#galeria" class="hover:text-primary-cta transition duration-200">Galería</a>
+                <a href="#contacto" class="hover:text-primary-cta transition duration-200">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. HERO PRINCIPAL -->
+    <section id="hero" class="hero-bg text-white py-20 md:py-32 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-6xl font-extrabold leading-tight mb-4">
+                <span class="text-secondary-color">Imprenta Profesional:</span> <br class="hidden sm:inline"> ¡Tu Marca, Nuestro Arte!
+            </h2>
+            <p class="text-xl sm:text-2xl font-light mb-8 max-w-4xl mx-auto">
+                Diseño que vende, impresión de alta calidad y artículos personalizados para que tu negocio **domine la publicidad**. Confía en expertos.
+            </p>
+            <a href="#contacto" class="inline-block bg-primary-cta text-white font-bold text-xl py-4 px-10 rounded-xl shadow-2xl hover:bg-secondary-color transition duration-300 transform hover:scale-105">
+                Cotiza tu trabajo aquí <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <!-- Frase SEO -->
+            <p class="mt-8 text-sm text-gray-300">
+                Lonas personalizadas, viniles, y todo lo que necesitas en **impresión creativa** y **diseño para negocios**.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. ¿QUIÉNES SOMOS? -->
+    <section id="quienes-somos" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl font-bold text-gray-900 mb-8">¿Quiénes Somos?</h3>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-lg text-gray-600 mb-4">
+                    Studio Gráfico nace de la pasión por transformar ideas en impacto visual. Somos un equipo de profesionales dedicados a ofrecer soluciones de **publicidad** y artículos personalizados con la más alta calidad y a **precios accesibles**.
+                </p>
+                <p class="text-lg text-gray-600 font-semibold">
+                    Nuestra promesa: máxima precisión, resultados duraderos y la confianza de que tu proyecto estará en manos expertas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICIOS (Catálogo) -->
+    <section id="servicios" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-extrabold text-center text-primary-cta mb-12">
+                Nuestros Servicios: Impresión de Alto Impacto
+            </h3>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
+                Somos tu **imprenta profesional** de confianza. Tenemos la solución perfecta para cada necesidad de tu marca.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Servicio 1: Lonas y Viniles -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-bullhorn text-4xl text-secondary-color mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Lonas y Viniles Publicitarios</h4>
+                    <p class="text-gray-600 text-sm">
+                        Impresión a gran formato para **lonas personalizadas**, anuncios exteriores y viniles adhesivos para vehículos o escaparates. ¡Publicidad que no pasa desapercibida!
+                    </p>
+                </div>
+
+                <!-- Servicio 2: Artículos Personales -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-tshirt text-4xl text-secondary-color mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Playeras y Textiles Personalizados</h4>
+                    <p class="text-gray-600 text-sm">
+                        Diseños únicos en **playeras personalizadas** mediante serigrafía, vinil textil y bordados profesionales. Uniformes o promocionales.
+                    </p>
+                </div>
+
+                <!-- Servicio 3: Papelería Premium -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-address-card text-4xl text-secondary-color mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Tarjetas de Presentación y Papelería</h4>
+                    <p class="text-gray-600 text-sm">
+                        Impresión offset o digital de alta resolución para **tarjetas de presentación**, volantes, y folletos. La primera impresión es la que cuenta.
+                    </p>
+                </div>
+
+                <!-- Servicio 4: Merchandising -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-mug-hot text-4xl text-secondary-color mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Vasos, Termos y Cilindros</h4>
+                    <p class="text-gray-600 text-sm">
+                        Artículos promocionales de alto valor. Marca tus vasos y **artículos personalizados** con tu logo. Ideales para eventos o regalos corporativos.
+                    </p>
+                </div>
+
+                <!-- Servicio 5: Grabado y Corte -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-cut text-4xl text-secondary-color mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Grabado Láser y Figuras</h4>
+                    <p class="text-gray-600 text-sm">
+                        Servicio de **grabado láser** en diversos materiales y cortes de precisión para figuras en coroplast. Soluciones creativas para señalización.
+                    </p>
+                </div>
+
+                <!-- Servicio 6: Diseño y Branding -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-lightbulb text-4xl text-secondary-color mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2 text-gray-900">Diseño de Logotipos y Branding</h4>
+                    <p class="text-gray-600 text-sm">
+                        ¿Necesitas una identidad? Creamos tu **diseño para negocios** desde cero: logotipos, manuales de marca y campañas publicitarias.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BENEFICIOS / ¿POR QUÉ ELEGIRNOS? -->
+    <section id="beneficios" class="py-16 md:py-24 bg-tertiary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-extrabold text-center mb-12">
+                ¿Por Qué Elegir Studio Gráfico?
+            </h3>
+            <p class="text-center text-xl font-light mb-10 max-w-3xl mx-auto">
+                Somos más que una imprenta. Somos tu socio estratégico para lograr una **impresión creativa** que te haga destacar.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <!-- Beneficio 1 -->
+                <div class="p-4 bg-white/10 rounded-xl">
+                    <i class="fas fa-hand-holding-usd text-4xl text-secondary-color mb-3"></i>
+                    <h4 class="text-xl font-bold mb-2">Precios Accesibles</h4>
+                    <p class="text-sm font-light">
+                        Calidad premium sin sacrificar tu presupuesto. Máximo valor por tu inversión publicitaria.
+                    </p>
+                </div>
+                <!-- Beneficio 2 -->
+                <div class="p-4 bg-white/10 rounded-xl">
+                    <i class="fas fa-medal text-4xl text-secondary-color mb-3"></i>
+                    <h4 class="text-xl font-bold mb-2">Resultados de Calidad</h4>
+                    <p class="text-sm font-light">
+                        Usamos la mejor tecnología en impresión y **grabado láser** para acabados profesionales.
+                    </p>
+                </div>
+                <!-- Beneficio 3 -->
+                <div class="p-4 bg-white/10 rounded-xl">
+                    <i class="fas fa-clock text-4xl text-secondary-color mb-3"></i>
+                    <h4 class="text-xl font-bold mb-2">Entrega Rápida</h4>
+                    <p class="text-sm font-light">
+                        Agilizamos tu pedido sin comprometer la perfección. Tu publicidad lista cuando la necesitas.
+                    </p>
+                </div>
+                <!-- Beneficio 4 -->
+                <div class="p-4 bg-white/10 rounded-xl">
+                    <i class="fas fa-headset text-4xl text-secondary-color mb-3"></i>
+                    <h4 class="text-xl font-bold mb-2">Atención Personalizada</h4>
+                    <p class="text-sm font-light">
+                        Asesoría experta desde el diseño hasta la entrega. Te ayudamos a elegir el mejor material.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROCESO DE TRABAJO EN 3 PASOS -->
+    <section id="proceso" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl font-extrabold text-gray-900 mb-12">
+                Nuestro Proceso Simple de 3 Pasos
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 relative">
+                <!-- Paso 1 -->
+                <div class="process-step flex flex-col items-center z-10">
+                    <div class="bg-primary-cta text-white w-16 h-16 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-xl">
+                        1
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2">Cotiza y Confirma</h4>
+                    <p class="text-gray-600 max-w-xs">
+                        Usa nuestro formulario o el WhatsApp directo. Cuéntanos tu idea, te enviamos el precio más competitivo.
+                    </p>
+                </div>
+                
+                <!-- Paso 2 -->
+                <div class="process-step flex flex-col items-center z-10">
+                    <div class="bg-primary-cta text-white w-16 h-16 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-xl">
+                        2
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2">Diseño y Aprobación</h4>
+                    <p class="text-gray-600 max-w-xs">
+                        Trabajamos tu **diseño para negocios**. Recibes una muestra digital para tu aprobación final antes de imprimir.
+                    </p>
+                </div>
+                
+                <!-- Paso 3 -->
+                <div class="process-step flex flex-col items-center z-10">
+                    <div class="bg-primary-cta text-white w-16 h-16 flex items-center justify-center rounded-full text-3xl font-bold mb-4 shadow-xl">
+                        3
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2">Impresión y Entrega</h4>
+                    <p class="text-gray-600 max-w-xs">
+                        Usamos nuestra tecnología de punta. Recoge tus **lonas personalizadas** o las enviamos directamente a tu negocio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 6. GALERÍA / MUESTRAS -->
+    <section id="galeria" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-extrabold text-center text-primary-cta mb-12">
+                Nuestra Calidad en Imágenes
+            </h3>
+            <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
+                Más de 5 años de experiencia entregando **resultados de calidad**. Esto es lo que podemos hacer por tu marca.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Muestra 1: Lona Publicitaria (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/400x300/38A3A5/ffffff?text=Lona%20Publicitaria" alt="Lona publicitaria de alta resolución" class="w-full h-auto object-cover">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700">Lonas Publicitarias</p>
+                </div>
+                <!-- Muestra 2: Tarjetas de Presentación (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/400x300/FF4E50/ffffff?text=Tarjetas%20Premium" alt="Tarjetas de presentación con acabados premium" class="w-full h-auto object-cover">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700">Tarjetas de Presentación</p>
+                </div>
+                <!-- Muestra 3: Playeras Personalizadas (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/400x300/FC913A/ffffff?text=Playeras%20Personalizadas" alt="Playeras personalizadas con bordado" class="w-full h-auto object-cover">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700">Playeras y Bordado</p>
+                </div>
+                <!-- Muestra 4: Grabado Láser/Coroplast (Placeholder) -->
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://placehold.co/400x300/1A1A2E/ffffff?text=Grabado%20Láser" alt="Muestra de grabado láser en madera o acrílico" class="w-full h-auto object-cover">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700">Grabado y Figuras</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PREGUNTAS FRECUENTES (FAQ) -->
+    <section id="faq" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-4xl font-extrabold text-center text-gray-900 mb-12">
+                Preguntas Frecuentes (FAQ)
+            </h3>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <details class="bg-white p-5 rounded-xl shadow-md border-t-4 border-primary-cta group">
+                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center text-gray-800">
+                        ¿Qué tipo de archivos necesito para la impresión?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Aceptamos PDF, AI, PSD, o JPG/PNG de alta resolución (300 dpi). Si no tienes el diseño, ¡no te preocupes! Nosotros te ayudamos con el **diseño para negocios**.
+                    </p>
+                </details>
+                <!-- FAQ 2 -->
+                <details class="bg-white p-5 rounded-xl shadow-md border-t-4 border-primary-cta group">
+                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center text-gray-800">
+                        ¿Tienen un mínimo de pedido para **artículos personalizados** como playeras o vasos?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Sí, algunos productos tienen un mínimo para mantener nuestros precios accesibles y eficientes. Envíanos tu cotización y te especificaremos el mínimo exacto.
+                    </p>
+                </details>
+                <!-- FAQ 3 -->
+                <details class="bg-white p-5 rounded-xl shadow-md border-t-4 border-primary-cta group">
+                    <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center text-gray-800">
+                        ¿Cuánto tardan en entregar un pedido de **lonas personalizadas**?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-3 text-gray-600">
+                        Los tiempos varían por volumen y complejidad, pero el tiempo estándar es de 2 a 5 días hábiles después de la aprobación del diseño. ¡Te garantizamos agilidad!
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA FINAL FUERTE & CONTACTO -->
+    <section id="contacto" class="py-16 md:py-24 hero-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- CTA Fuerte -->
+            <div class="flex flex-col justify-center">
+                <h3 class="text-4xl sm:text-5xl font-extrabold mb-4">
+                    ¡No solo imprimimos, <span class="text-secondary-color">Hacemos Crecer tu Marca!</span>
+                </h3>
+                <p class="text-xl font-light mb-6">
+                    Tu búsqueda de **imprenta profesional** termina aquí. Obtén **resultados de calidad** que impulsarán tu negocio.
+                </p>
+                <a href="https://wa.me/5219996708674?text=Quiero%20empezar%20mi%20proyecto%20con%20Studio%20Gráfico."
+                   class="inline-block w-full sm:w-auto bg-green-500 text-white font-bold text-xl py-4 px-10 rounded-xl shadow-2xl hover:bg-green-600 transition duration-300 transform hover:scale-105 text-center">
+                    Enviar mensaje por WhatsApp ahora
+                </a>
+            </div>
+
+            <!-- Formulario de Cotización -->
+            <div class="bg-white p-8 rounded-xl shadow-2xl text-gray-800">
+                <h4 class="text-2xl font-bold mb-6 text-primary-cta">Cotiza tu Proyecto Hoy</h4>
+                <form id="cotizacion-form">
+                    <input type="text" placeholder="Nombre completo" required class="input-style">
+                    <input type="email" placeholder="Correo electrónico" required class="input-style">
+                    <input type="tel" placeholder="Teléfono / WhatsApp (ej: 9996708674)" required class="input-style">
+                    <select class="input-style" required>
+                        <option value="">Selecciona un Servicio Principal...</option>
+                        <option value="lonas">Lonas Publicitarias</option>
+                        <option value="tarjetas">Tarjetas de Presentación</option>
+                        <option value="playeras">Playeras Personalizadas / Bordado</option>
+                        <option value="vasos">Vasos / Termos / Artículos Promocionales</option>
+                        <option value="diseno">Diseño de Logotipo / Branding</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <textarea placeholder="Describe brevemente tu proyecto (cantidad, medidas, materiales, etc.)" rows="4" required class="input-style"></textarea>
+                    
+                    <button type="submit" class="w-full bg-secondary-color text-white font-bold py-3 rounded-xl hover:bg-primary-cta transition duration-300 transform hover:scale-[1.02]">
+                        Solicitar Cotización sin Compromiso
+                    </button>
+                    <p id="form-message" class="mt-4 text-center font-semibold text-sm text-gray-600"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-bg text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg font-semibold mb-2">Studio Gráfico | Imprenta de Calidad</p>
+            <p class="text-sm">
+                Encuentra tu solución de **publicidad** e **impresión profesional**.
+            </p>
+            <div class="mt-4 space-x-4 text-sm">
+                <a href="#servicios" class="hover:text-primary-cta">Servicios</a>
+                <a href="#contacto" class="hover:text-primary-cta">Contacto</a>
+                <span class="text-gray-500">|</span>
+                <span class="text-gray-500">Tel: 999 670 8674</span>
+            </div>
+            <p class="mt-4 text-xs text-gray-600">&copy; 2025 Studio Gráfico. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script para manejar el envío del formulario (simulado ya que no hay backend)
+        document.getElementById('cotizacion-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formMessage = document.getElementById('form-message');
+            
+            // Simulación de envío exitoso
+            formMessage.textContent = '¡Gracias! Tu cotización ha sido enviada con éxito. Nos pondremos en contacto muy pronto.';
+            formMessage.classList.remove('text-gray-600');
+            formMessage.classList.add('text-green-600');
+            
+            // Opcional: limpiar el formulario después del envío
+            this.reset();
+            
+            // Implementación para enviar a WhatsApp (mejor práctica)
+            /*
+            const name = this.querySelector('input[type="text"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const service = this.querySelector('select').value;
+            const details = this.querySelector('textarea').value;
+            
+            const whatsappText = `Hola Studio Gráfico, mi nombre es ${name} y me interesa cotizar el servicio de ${service}. Teléfono: ${phone}. Detalles: ${details}`;
+            const whatsappLink = `https://wa.me/5219996708674?text=${encodeURIComponent(whatsappText)}`;
+            
+            window.open(whatsappLink, '_blank');
+            formMessage.textContent = 'Serás redirigido a WhatsApp para enviar tu solicitud...';
+            */
+        });
+    </script>
+</body>
+</html>
