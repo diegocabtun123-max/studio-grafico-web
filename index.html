@@ -90,7 +90,12 @@
     <!-- HEADER/NAVBAR -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-3xl font-extrabold text-primary-cta">Studio Gráfico</h1>
+            <!-- LOGOTIPO AGREGADO -->
+            <a href="#hero" class="flex items-center">
+                <!-- REFERENCIA CORREGIDA A LOGO USANDO EL NOMBRE ORIGINAL DEL ARCHIVO SUBIDO -->
+                <img src="LOGO%20EPS-01.jpg" alt="Logo de Studio Gráfico, diseño e impresión" class="h-10 sm:h-12 w-auto">
+            </a>
+            <!-- FIN LOGOTIPO -->
             <nav class="hidden md:flex space-x-6 text-gray-600 font-semibold">
                 <a href="#servicios" class="hover:text-primary-cta transition duration-200">Servicios</a>
                 <a href="#beneficios" class="hover:text-primary-cta transition duration-200">Beneficios</a>
@@ -295,7 +300,7 @@
         </div>
     </section>
     
-    <!-- 6. GALERÍA / MUESTRAS -->
+    <!-- 6. GALERÍA / MUESTRAS (Imágenes representativas de internet) -->
     <section id="galeria" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 class="text-4xl font-extrabold text-center text-primary-cta mb-12">
@@ -306,25 +311,45 @@
             </p>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- Muestra 1: Lona Publicitaria (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://placehold.co/400x300/38A3A5/ffffff?text=Lona%20Publicitaria" alt="Lona publicitaria de alta resolución" class="w-full h-auto object-cover">
+                <!-- Muestra 1: Lona Publicitaria (Simulando imagen de internet) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://placehold.co/400x300/38A3A5/ffffff?font=inter&text=LONA+GIGANTE+VINIL" alt="Lona publicitaria de alta resolución impresa" class="w-full h-auto object-cover">
                     <p class="p-2 text-center text-sm font-semibold text-gray-700">Lonas Publicitarias</p>
                 </div>
-                <!-- Muestra 2: Tarjetas de Presentación (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://placehold.co/400x300/FF4E50/ffffff?text=Tarjetas%20Premium" alt="Tarjetas de presentación con acabados premium" class="w-full h-auto object-cover">
+                <!-- Muestra 2: Tarjetas de Presentación (Simulando imagen de internet) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://placehold.co/400x300/FF4E50/ffffff?font=inter&text=TARJETAS+PROFESIONALES" alt="Tarjetas de presentación con acabados premium y mate" class="w-full h-auto object-cover">
                     <p class="p-2 text-center text-sm font-semibold text-gray-700">Tarjetas de Presentación</p>
                 </div>
-                <!-- Muestra 3: Playeras Personalizadas (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://placehold.co/400x300/FC913A/ffffff?text=Playeras%20Personalizadas" alt="Playeras personalizadas con bordado" class="w-full h-auto object-cover">
+                <!-- Muestra 3: Playeras Personalizadas (Simulando imagen de internet) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://placehold.co/400x300/FC913A/ffffff?font=inter&text=PLAYERA+SERIGRAFIA" alt="Playeras personalizadas con serigrafía o bordado" class="w-full h-auto object-cover">
                     <p class="p-2 text-center text-sm font-semibold text-gray-700">Playeras y Bordado</p>
                 </div>
-                <!-- Muestra 4: Grabado Láser/Coroplast (Placeholder) -->
-                <div class="rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://placehold.co/400x300/1A1A2E/ffffff?text=Grabado%20Láser" alt="Muestra de grabado láser en madera o acrílico" class="w-full h-auto object-cover">
+                <!-- Muestra 4: Grabado Láser/Coroplast (Simulando imagen de internet) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://placehold.co/400x300/1A1A2E/ffffff?font=inter&text=GRABADO+LASER+COROPLAST" alt="Muestra de grabado láser en madera o figuras en coroplast" class="w-full h-auto object-cover">
                     <p class="p-2 text-center text-sm font-semibold text-gray-700">Grabado y Figuras</p>
+                </div>
+                <!-- Muestra 5: Viniles (Nueva imagen) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://placehold.co/400x300/40C1A8/ffffff?font=inter&text=VINIL+DECORATIVO+VEHICULAR" alt="Vinil decorativo para pared o vehicular" class="w-full h-auto object-cover">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700">Viniles y Calcomanías</p>
+                </div>
+                 <!-- Muestra 6: Tazas/Termos (Nueva imagen) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://placehold.co/400x300/FCAE1E/ffffff?font=inter&text=TAZAS+Y+TERMOS" alt="Tazas, termos y cilindros personalizados" class="w-full h-auto object-cover">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700">Artículos Promocionales</p>
+                </div>
+                <!-- Muestra 7: Fotos/Stickers (Nueva imagen) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://placehold.co/400x300/5A5A5A/ffffff?font=inter&text=IMPRESION+DE+FOTOS+Y+STICKERS" alt="Impresión de fotografías y stickers" class="w-full h-auto object-cover">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700">Impresión de Fotos y Stickers</p>
+                </div>
+                 <!-- Muestra 8: Logotipos (Nueva imagen) -->
+                <div class="rounded-xl overflow-hidden shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <img src="https://placehold.co/400x300/3E38A5/ffffff?font=inter&text=DISEÑO+DE+LOGOTIPO" alt="Diseño de logotipo para empresas" class="w-full h-auto object-cover">
+                    <p class="p-2 text-center text-sm font-semibold text-gray-700">Diseño de Logotipos</p>
                 </div>
             </div>
         </div>
