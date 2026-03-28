@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Gráfico</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root{--c:#00cfff;--m:#ff00a8;--y:#ffd600;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#000;color:#fff;overflow-x:hidden;}
+
+header{
+  height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url('img/hero.jpg');
+  background-size:cover;background-position:center;
+}
+
+header h1{font-size:2.5rem;background:linear-gradient(90deg,var(--c),var(--m),var(--y));-webkit-background-clip:text;color:transparent;}
+header p{margin:15px 0;font-size:1.1rem;}
+
+.btn{display:inline-block;margin-top:10px;padding:12px 25px;border-radius:30px;background:linear-gradient(45deg,var(--c),var(--m),var(--y));color:#000;text-decoration:none;font-weight:bold;transition:.3s;}
+.btn:hover{transform:scale(1.08);} 
+
+section{padding:70px 20px;}
+.container{max-width:1100px;margin:auto;}
+
+h2{text-align:center;margin-bottom:30px;font-size:1.8rem;}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+
+.card{background:#111;border-radius:15px;overflow:hidden;transition:.3s;}
+.card:hover{transform:translateY(-8px);} 
+
+.card img{width:100%;height:180px;object-fit:cover;display:block;}
+.card-body{padding:15px;text-align:center;}
+.card-body h3{margin-bottom:10px;font-size:1.1rem;}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:10px;}
+
+.floating{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:12px;z-index:999;}
+.floating a{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;font-size:20px;}
+.whatsapp{background:#25D366;}
+.instagram{background:#E4405F;}
+.tiktok{background:#000;border:2px solid #fff;}
+.floating a:hover{transform:scale(1.15);} 
+
+footer{text-align:center;padding:25px;background:#111;margin-top:30px;}
+
+
+/* FONDOS CMYK */
+body{
+  background: linear-gradient(135deg,#000 40%, rgba(0,207,255,0.2), rgba(255,0,168,0.2), rgba(255,214,0,0.2));
+}
+
+section:nth-child(even){
+  background: linear-gradient(135deg, rgba(0,207,255,0.1), rgba(255,0,168,0.1));
+}
+
+/* FORMULARIO */
+.form{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.form input, .form textarea{
+  padding:12px;
+  border-radius:10px;
+  border:none;
+}
+
+.form button{
+  padding:12px;
+  border:none;
+  border-radius:20px;
+  background:linear-gradient(45deg,var(--c),var(--m),var(--y));
+  font-weight:bold;
+}
+
+/* FAQ */
+.faq-item{
+  background:#111;
+  margin-bottom:10px;
+  padding:15px;
+  border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>IMPRESIÓN QUE IMPACTA</h1>
+    <p>Diseño, impresión y personalizados en Mérida</p>
+    <a href="https://wa.me/529996708674?text=Hola%20quiero%20cotizar" class="btn">Cotizar ahora</a>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>Productos y Servicios</h2>
+    <div class="grid">
+
+      <div class="card">
+        <img src="img/playeras.jpg" alt="playeras">
+        <div class="card-body">
+          <h3>Playeras personalizadas</h3>
+          <a class="btn" href="https://wa.me/529996708674?text=Quiero%20playeras">Pedir</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/lonas.jpg" alt="lonas">
+        <div class="card-body">
+          <h3>Lonas y viniles</h3>
+          <a class="btn" href="https://wa.me/529996708674?text=Quiero%20lonas">Cotizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/tarjetas.jpg" alt="tarjetas">
+        <div class="card-body">
+          <h3>Tarjetas de presentación</h3>
+          <a class="btn" href="https://wa.me/529996708674?text=Quiero%20tarjetas">Cotizar</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="img/vasos.jpg" alt="vasos">
+        <div class="card-body">
+          <h3>Vasos personalizados</h3>
+          <a class="btn" href="https://wa.me/529996708674?text=Quiero%20vasos">Pedir</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Trabajos reales</h2>
+    <div class="gallery">
+      <img src="img/trabajo1.jpg">
+      <img src="img/trabajo2.jpg">
+      <img src="img/trabajo3.jpg">
+      <img src="img/trabajo4.jpg">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>¿Quiénes somos?</h2>
+    <p style="text-align:center;max-width:700px;margin:auto;opacity:.8;">
+      Somos un negocio local enfocado en ofrecer soluciones de impresión y productos personalizados. Nos gusta hacer bien nuestro trabajo, cuidar los detalles y entregar resultados que realmente ayuden a nuestros clientes.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item"><strong>¿Hacen entregas?</strong><br>Sí, podemos coordinar entregas dependiendo del pedido.</div>
+    <div class="faq-item"><strong>¿Puedo mandar mi diseño?</strong><br>Sí, puedes enviarlo o nosotros te ayudamos a crearlo.</div>
+    <div class="faq-item"><strong>¿Cuánto tardan?</strong><br>Depende del producto, pero buscamos entregar lo más rápido posible.</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Contáctanos</h2>
+    <form class="form">
+      <input type="text" placeholder="Tu nombre">
+      <input type="tel" placeholder="Tu teléfono">
+      <textarea rows="4" placeholder="¿Qué necesitas?"></textarea>
+      <button type="button" onclick="window.location.href='https://wa.me/529996708674?text=Hola quiero información'">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<div class="floating">
+  <a class="whatsapp" href="https://wa.me/529996708674"><i class="fab fa-whatsapp"></i></a>
+  <a class="instagram" href="https://www.instagram.com/studio_grafico_merida"><i class="fab fa-instagram"></i></a>
+  <a class="tiktok" href="https://www.tiktok.com/@sgrafico"><i class="fab fa-tiktok"></i></a>
+</div>
+
+<footer>
+  <p>Studio Gráfico © 2026</p>
+</footer>
+
+</body>
+</html>
